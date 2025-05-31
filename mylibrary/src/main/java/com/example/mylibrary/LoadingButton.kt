@@ -21,7 +21,16 @@ class LoadingButton @JvmOverloads constructor(
     init {
         LayoutInflater.from(context).inflate(R.layout.loading_button, this, true)
         button = findViewById(R.id.button)
+
+        // Appliquer un fond violet arrondi par défaut
+        val defaultBg = GradientDrawable().apply {
+            setColor(Color.parseColor("#6200EE")) // Violet
+            cornerRadius = 1000f
+        }
+        button.background = defaultBg
+        button.setBackgroundDrawable(defaultBg)
     }
+
 
     fun showCountdown(duration: Int = 3) {
         button.isEnabled = false
@@ -40,15 +49,26 @@ class LoadingButton @JvmOverloads constructor(
             override fun run() {
                 if (timeLeft > 0) {
                     button.text = "$timeLeft"
+
                     val color = colors[timeLeft % colors.size]
-                    val bg = GradientDrawable()
-                    bg.setColor(color)
-                    bg.cornerRadius = 1000f // garde le bouton bien rond
-                    button.background = bg
+                    val bg = GradientDrawable().apply {
+                        shape = GradientDrawable.RECTANGLE
+                        cornerRadius = 1000f
+                        setColor(color)
+                    }
+
+                    // LOG TEST
+                    android.util.Log.d("LoadingButton", "Applying color: $color")
+
+                    // Ces deux lignes sont importantes pour forcer le changement
+                    button.setBackgroundDrawable(bg)
+                    button.invalidate()
+
                     timeLeft--
                     handler.postDelayed(this, 1000)
                 } else {
                     button.text = "✅"
+
                     button.animate()
                         .scaleX(1.2f)
                         .scaleY(1.2f)
@@ -61,10 +81,13 @@ class LoadingButton @JvmOverloads constructor(
                                 .start()
                         }.start()
 
-                    val finalBg = GradientDrawable()
-                    finalBg.setColor(Color.parseColor("#6BCB77")) // vert final
-                    finalBg.cornerRadius = 1000f // toujours rond
-                    button.background = finalBg
+                    val finalBg = GradientDrawable().apply {
+                        shape = GradientDrawable.RECTANGLE
+                        cornerRadius = 1000f
+                        setColor(Color.parseColor("#6BCB77"))
+                    }
+                    button.setBackgroundDrawable(finalBg)
+                    button.invalidate()
                     button.isEnabled = true
                 }
             }

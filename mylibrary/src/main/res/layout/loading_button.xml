@@ -5,17 +5,18 @@
         android:layout_height="200dp"
         android:layout_gravity="center">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:backgroundTint="@color/purple_500"
+            android:text="Envoyer"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:gravity="center"
-            android:layout_gravity="center"
-            android:background="@drawable/round_shape"
-            android:text="Envoyer" />
+            android:layout_gravity="center" />
+
+
+
 
     </FrameLayout>
 </merge>
