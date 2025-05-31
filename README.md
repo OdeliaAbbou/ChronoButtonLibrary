@@ -1,6 +1,6 @@
 # 🎉 ChronoButtonLibrary
 
-**ChronoButtonLibrary** is a lightweight custom Android view written in Kotlin that provides a **colorful countdown button** followed by a festive customed message:  
+**ChronoButtonLibrary** is a lightweight custom Android view written in Kotlin that provides a **colorful countdown button** followed by a festive custom  message:  
 **🎉 Happy Birthday!**
 
 Perfect for creating engaging and playful user experiences in your apps.
