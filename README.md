@@ -57,7 +57,7 @@ loadingButton.setOnClickListener {
 ⚙️ Customization
 Countdown time	    showCountdown(5)
 Backgrounds         Edit the colors array in LoadingButton.kt
-Final message	      Replace button.text = "🎉 Happy Birthday!"
+Final message	    Replace button.text = "🎉 Happy Birthday!"
 
 ✅ Compatibility
 Language: Kotlin
