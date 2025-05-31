@@ -9,7 +9,7 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Envoyer"
+            android:text="Press"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:gravity="center"

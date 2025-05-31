@@ -67,7 +67,7 @@ class LoadingButton @JvmOverloads constructor(
                     timeLeft--
                     handler.postDelayed(this, 1000)
                 } else {
-                    button.text = "✅"
+                    button.text = "Happy Biryhday\uD83C\uDF82 "
 
                     button.animate()
                         .scaleX(1.2f)
