@@ -55,7 +55,7 @@ loadingButton.setOnClickListener {
  ┣ 📄 activity_main.xml        ← Demo UI
 
 ⚙️ Customization
-Countdown time	    showCountdown(5)
+Countdown time	    showCountdown(3)
 Backgrounds         Edit the colors array in LoadingButton.kt
 Final message	    Replace button.text = "🎉 Happy Birthday!"
 
