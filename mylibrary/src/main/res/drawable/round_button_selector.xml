@@ -1,0 +1,17 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- État appuyé -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#5B00CC" /> <!-- Violet plus foncé -->
+            <corners android:radius="40dp" />
+        </shape>
+    </item>
+
+    <!-- État normal -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#6200EE" />
+            <corners android:radius="40dp" />
+        </shape>
+    </item>
+</selector>

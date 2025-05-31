@@ -2,8 +2,6 @@ package com.example.loadingbuttonlib
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import com.example.mylibrary.LoadingButton
 
 class MainActivity : AppCompatActivity() {
@@ -19,12 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         // Gère le clic
         loadingButton.setOnClickListener {
-            loadingButton.showLoading()
-
-            // Simule une tâche de 3 secondes
-            Handler(Looper.getMainLooper()).postDelayed({
-                loadingButton.hideLoading()
-            }, 3000)
+            loadingButton.showCountdown(3) // Appelle la fonction qui gère tout
         }
     }
 }
